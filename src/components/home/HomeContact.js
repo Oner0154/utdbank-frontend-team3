@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+
 
 const HomeContact = () => {
   return (
@@ -35,7 +36,11 @@ const HomeContact = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+export default HomeContact;
   )
 }
 
-export default HomeContact
+

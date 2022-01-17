@@ -1,6 +1,7 @@
-import React from "react"
-import SectionTitle from "../../common/SectionTitle"
-import TestimonalItem from "./TestimonalItem"
+import React from "react";
+import SectionTitle from "../../common/SectionTitle";
+import TestimonalItem from "./TestimonalItem";
+
 
 const Testimonal = () => {
   return (
@@ -16,25 +17,32 @@ const Testimonal = () => {
           <div className="client-carousel owl-carousel owl-theme">
             <TestimonalItem
               image="carousel-1.png"
-              title="Devit M. kolin"
-              job="CEO & Founder"
+              title="CEO & Founder"
+              person="Devit M. kolin"
               description="Awesome dolor sit amet, consectetur adipisicing elit sed
-                      do eusmod tempor incididunt ut labore et dolore magna
-                      aliquaenminim veniam quis nostrud dolore magn doloreut
-                      labore dolore magn."
+              do eusmod tempor incididunt ut labore et dolore magna
+              aliquaenminim veniam quis nostrud dolore magn doloreut
+              labore dolore magn."
             />
-
             <TestimonalItem
               image="carousel-2.png"
-              title="Sienna Miller"
-              job="CTO"
-              description="Very ut perspiciatis unde omnis iste natus error sitvoluptatem accusantium doloremque laudantium, totam remaperiam, eaque ipsa quae ab illo inventore veritatis etquasi architecto beatae vitae."
+              title="CTO"
+              person="Sienna Miller"
+              description="Very ut perspiciatis unde omnis iste natus error sit
+              voluptatem accusantium doloremque laudantium, totam rem
+              aperiam, eaque ipsa quae ab illo inventore veritatis et
+              quasi architecto beatae vitae."
+
             />
           </div>
         </div>
       </div>
     </section>
+  );
+};
+
+export default Testimonal;
+
   )
 }
 
-export default Testimonal

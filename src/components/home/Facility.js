@@ -1,5 +1,6 @@
-import React from "react"
-import SectionTitle from "../common/SectionTitle"
+import React from "react";
+import SectionTitle from "../common/SectionTitle";
+
 
 const Facility = () => {
   return (
@@ -22,9 +23,10 @@ const Facility = () => {
                     <div className="home-service-start">
                       <SectionTitle
                         title="Payment gateway is easy to fill with our system"
-                        description=" Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod cste et dolore magnam aliquam
-                          quaerat voluptatem."
+                        description="Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod cste et dolore magnam aliquam
+                        quaerat voluptatem."
+
                       />
 
                       <p>
@@ -33,7 +35,9 @@ const Facility = () => {
                         dolore magna aliqua. Ut enim ad minim numquam eius modi
                         tempora incidunt ut labore et dolore magnam
                       </p>
-                      <a href="" className="btn1 blue-gradient btn-with-image">
+ 
+                      <a href="#" className="btn1 blue-gradient btn-with-image">
+
                         <i className="flaticon-login"></i>
                         <i className="flaticon-login"></i>
                         Get Started
@@ -57,7 +61,12 @@ const Facility = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+export default Facility;
+
   )
 }
 
-export default Facility
+

@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../../common/SectionTitle";
-import ServiceItem from "./ServiceItem";
+import ServiceItem from "./HomeServiceItem";
 
 const Services = () => {
   return (
