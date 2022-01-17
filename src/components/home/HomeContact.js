@@ -40,7 +40,6 @@ const HomeContact = () => {
 };
 
 export default HomeContact;
-  )
-}
+
 
 

@@ -43,6 +43,4 @@ const Testimonal = () => {
 
 export default Testimonal;
 
-  )
-}
 

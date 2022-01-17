@@ -48,7 +48,5 @@ const TestimonalItem = ({ image, description, title, person }) => {
 };
 
 export default TestimonalItem;
-  )
-}
 
 
