@@ -39,6 +39,7 @@ const TestimonalItem = ({ image, description, title, person }) => {
                 <i className="flaticon-left-arrow"></i>
               </span>
             </button>
+
           </div>
         </div>
       </div>
@@ -47,3 +48,7 @@ const TestimonalItem = ({ image, description, title, person }) => {
 };
 
 export default TestimonalItem;
+  )
+}
+
+

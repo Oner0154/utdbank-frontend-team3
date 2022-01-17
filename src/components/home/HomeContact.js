@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const HomeContact = () => {
   return (
     <section className="home-quick-contact-section section-minus-margin">
@@ -39,3 +40,7 @@ const HomeContact = () => {
 };
 
 export default HomeContact;
+  )
+}
+
+
