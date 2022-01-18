@@ -2,13 +2,13 @@ import "./App.css";
 import Footer from "./components/common/Footer";
 import Topbar from "./components/common/Topbar";
 import HomePage from "./pages/HomePage";
-import LoginRegisterPage from "./pages/LoginRegisterPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ForgetPasswordPage from "./pages/ForgetPasswordPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import PricingPage from "./pages/PricingPage";
 import ServicesPage from "./pages/ServicesPage";
+import LoginRegisterPage from "./pages/LoginRegisterPage";
 
 function App() {
   return (
