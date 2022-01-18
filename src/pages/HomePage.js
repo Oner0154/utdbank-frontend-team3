@@ -12,6 +12,7 @@ import Pricing from "../components/home/Pricing";
 import Testimonal from "../components/home/testimonal/Testimonal";
 import HomeServices from "../components/home/services/HomeServices";
 
+
 const HomePage = () => {
   return (
     <>
@@ -28,7 +29,7 @@ const HomePage = () => {
       <Testimonal />
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage
