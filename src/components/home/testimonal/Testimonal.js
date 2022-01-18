@@ -2,7 +2,6 @@ import React from "react";
 import SectionTitle from "../../common/SectionTitle";
 import TestimonalItem from "./TestimonalItem";
 
-
 const Testimonal = () => {
   return (
     <section className="home-client-section pt-100 pb-50">
@@ -32,7 +31,6 @@ const Testimonal = () => {
               voluptatem accusantium doloremque laudantium, totam rem
               aperiam, eaque ipsa quae ab illo inventore veritatis et
               quasi architecto beatae vitae."
-
             />
           </div>
         </div>
@@ -42,5 +40,4 @@ const Testimonal = () => {
 };
 
 export default Testimonal;
-
 

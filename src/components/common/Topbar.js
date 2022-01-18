@@ -12,9 +12,9 @@ const Topbar = () => {
 
           <div className="navbar-option">
             <div className="navbar-option-item">
-              <a href="authentication.html">
+              <Link to="/">
                 <i className="flaticon-login"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
