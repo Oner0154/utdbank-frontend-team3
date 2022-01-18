@@ -31,7 +31,11 @@ const Topbar = () => {
               >
                 <ul className="navbar-nav mx-auto">
                   <li className="nav-item">
-                    <Link to="/" className="nav-link active">
+                    <Link
+                      to="/"
+                      className="nav-link 
+                    "
+                    >
                       Home
                     </Link>
                   </li>
