@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -29,9 +30,9 @@ const Contact = () => {
                 <div className="box-card-details">
                   <h3 className="box-card-title mb-20">Email</h3>
                   <p className="box-card-para">
-                    <a
+                    <Link
+                      to="/cdn-cgi/l/email-protection#7e171018113e1f12171f501d1113"
                       className="link-us"
-                      href="/cdn-cgi/l/email-protection#7e171018113e1f12171f501d1113"
                     >
                       <span
                         className="__cf_email__"
@@ -39,12 +40,12 @@ const Contact = () => {
                       >
                         [email&#160;protected]
                       </span>
-                    </a>
+                    </Link>
                   </p>
                   <p className="box-card-para">
-                    <a
+                    <Link
+                      to="/cdn-cgi/l/email-protection#82f1f7f2f2edf0f6c2e3eeebe3ace1edef"
                       className="link-us"
-                      href="/cdn-cgi/l/email-protection#82f1f7f2f2edf0f6c2e3eeebe3ace1edef"
                     >
                       <span
                         className="__cf_email__"
@@ -52,7 +53,7 @@ const Contact = () => {
                       >
                         [email&#160;protected]
                       </span>
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -67,9 +68,9 @@ const Contact = () => {
                 <div className="box-card-details">
                   <h3 className="box-card-title mb-20">Phone</h3>
                   <p className="box-card-para">
-                    <a className="link-us" href="tel:(+00)67834598">
+                    <Link to="tel:(+00)67834598" className="link-us">
                       (+00) 678 345 98
-                    </a>
+                    </Link>
                   </p>
                   <p className="box-card-para">+(456) 332-897-234</p>
                 </div>

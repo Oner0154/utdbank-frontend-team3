@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Retail = () => {
   return (
@@ -33,24 +34,24 @@ const Retail = () => {
                       <h4 className="client-caption-designation">CTO</h4>
                       <ul className="worker-social-link">
                         <li>
-                          <a href="#">
+                          <Link to="facebook.com/johndoe" target="_blank">
                             <i className="bx bxl-facebook"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="twitter.com/johndoe" target="_blank">
                             <i className="bx bxl-twitter"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="instagram.com/johndoe" target="_blank">
                             <i className="bx bxl-instagram"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="linkedin.com/johndoe" target="_blank">
                             <i className="bx bxl-linkedin"></i>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -68,24 +69,24 @@ const Retail = () => {
                       </h4>
                       <ul className="worker-social-link">
                         <li>
-                          <a href="#">
+                          <Link to="facebook.com/alexmaxwell" target="_blank">
                             <i className="bx bxl-facebook"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="twitter.com/alexmaxwell" target="_blank">
                             <i className="bx bxl-twitter"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="instagram.com/alexmaxwell" target="_blank">
                             <i className="bx bxl-instagram"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="linkedin.com/alexmaxwell" target="_blank">
                             <i className="bx bxl-linkedin"></i>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -103,24 +104,27 @@ const Retail = () => {
                       </h4>
                       <ul className="worker-social-link">
                         <li>
-                          <a href="#">
+                          <Link to="facebook.com/robertjohnson" target="_blank">
                             <i className="bx bxl-facebook"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="twitter.com/robertjohnson" target="_blank">
                             <i className="bx bxl-twitter"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link
+                            to="instagram.com/robertjohnson"
+                            target="_blank"
+                          >
                             <i className="bx bxl-instagram"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="linkedin.com/robertjohnson" target="_blank">
                             <i className="bx bxl-linkedin"></i>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -138,24 +142,24 @@ const Retail = () => {
                       </h4>
                       <ul className="worker-social-link">
                         <li>
-                          <a href="#">
+                          <Link to="facebook.com/devitmkolin" target="_blank">
                             <i className="bx bxl-facebook"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="twitter.com/devitmkolin" target="_blank">
                             <i className="bx bxl-twitter"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="instagram.com/devitmkolin" target="_blank">
                             <i className="bx bxl-instagram"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="linkedin.com/devitmkolin" target="_blank">
                             <i className="bx bxl-linkedin"></i>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>

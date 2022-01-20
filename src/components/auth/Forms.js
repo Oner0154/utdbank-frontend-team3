@@ -11,7 +11,7 @@ const Forms = () => {
       <div className="authentication-grid">
         <div className="authentication-item authentication-img-bg"></div>
         <div className="authentication-item bg-white pl-15 pr-15">
-          <div className="authentication-user-panel">
+          <div className="authentication-user-panel" style={{ height: "auto" }}>
             <div className="authentication-user-header">
               <Link to="/">
                 <img src="assets/images/logo.png" alt="logo" />
@@ -27,7 +27,6 @@ const Forms = () => {
                   data-authentcation-tab="1"
                   onClick={() => {
                     setActive("login");
-                    navigate("/loginregister");
                   }}
                 >
                   <img src="assets/images/login.png" alt="icon" />
@@ -40,13 +39,13 @@ const Forms = () => {
                   data-authentcation-tab="2"
                   onClick={() => {
                     setActive("register");
-                    navigate("/loginregister");
                   }}
                 >
                   <img src="assets/images/register.png" alt="icon" />
                   Register
                 </div>
               </div>
+
               <div className="authentication-tab-details">
                 <div
                   className={`authentication-tab-details-item ${

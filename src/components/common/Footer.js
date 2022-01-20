@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -29,17 +31,17 @@ const Footer = () => {
                 </div>
                 <ul className="footer-details footer-list">
                   <li>
-                    <a href="faqs.html">FAQ's</a>
+                    <Link to="/faqs">FAQ's</Link>
                   </li>
                   <li>
-                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <Link to="/privacy-policy">Privacy Policy</Link>
                   </li>
                   <li>
-                    <a href="terms-conditions.html">Terms & Conditions</a>
+                    <Link to="/terms">Terms & Conditions</Link>
                   </li>
 
                   <li>
-                    <a href="contact-us.html">Contact Us</a>
+                    <Link to="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
@@ -51,16 +53,18 @@ const Footer = () => {
                 </div>
                 <ul className="footer-details footer-list">
                   <li>
-                    <a href="about-us.html">About Us</a>
+                    <Link to="/about">About Us</Link>
                   </li>
                   <li>
-                    <a href="services.html">Services</a>
+                    <Link to="/service">Services</Link>
                   </li>
                   <li>
-                    <a href="features.html">Features</a>
+                    <HashLink to={{ pathname: "/", hash: "feature-section" }}>
+                      Features
+                    </HashLink>
                   </li>
                   <li>
-                    <a href="pricing.html">Our Pricing</a>
+                    <Link to="/pricing">Our Pricing</Link>
                   </li>
                 </ul>
               </div>
@@ -78,24 +82,24 @@ const Footer = () => {
                   <li>
                     Message:
                     <span>
-                      <a href="/cdn-cgi/l/email-protection#96fff8f0f9d6f7fafff7b8f5f9fb">
+                      <Link to="/cdn-cgi/l/email-protection#96fff8f0f9d6f7fafff7b8f5f9fb">
                         <span
                           className="__cf_email__"
                           data-cfemail="224b4c444d62434e4b430c414d4f"
                         >
                           [email&#160;protected]
                         </span>
-                      </a>
+                      </Link>
                     </span>
                   </li>
                   <li>
                     Phone:
                     <span>
-                      <a href="tel:(+00)67834598">(+00) 678 345 98</a>
+                      <Link to="tel:(+00)67834598">(+00) 678 345 98</Link>
                     </span>
                   </li>
                   <li>
-                    Faq: <span>+(456) 332-897-234</span>
+                    Fax: <span>+(456) 332-897-234</span>
                   </li>
                 </ul>
               </div>
@@ -106,37 +110,37 @@ const Footer = () => {
           <div className="footer-lower-item footer-copyright-text">
             <p>
               Copyright ©2021 Design & Developed by
-              <a href="https://techproeducation.com" target="_blank">
+              <Link to="https://techproeducation.com" target="_blank">
                 Techpro Education
-              </a>
+              </Link>
             </p>
           </div>
           <div className="footer-lower-item footer-social-logo">
             <ul className="footer-social-list">
               <li className="social-btn social-btn-fb">
-                <a href="#">
+                <Link to="facebook.com/utdbank" target="_blank">
                   <i className="bx bxl-facebook"></i>
-                </a>
+                </Link>
               </li>
               <li className="social-btn social-btn-tw">
-                <a href="#">
+                <Link to="twitter.com/utdbank" target="_blank">
                   <i className="bx bxl-twitter"></i>
-                </a>
+                </Link>
               </li>
               <li className="social-btn social-btn-ins">
-                <a href="#">
+                <Link to="instagram.com/utdbank" target="_blank">
                   <i className="bx bxl-instagram"></i>
-                </a>
+                </Link>
               </li>
               <li className="social-btn social-btn-pin">
-                <a href="#">
+                <Link to="pinterest.com/utdbank" target="_blank">
                   <i className="bx bxl-pinterest-alt"></i>
-                </a>
+                </Link>
               </li>
               <li className="social-btn social-btn-yt">
-                <a href="#">
+                <Link to="youtube.com/utdbank" target="_blank">
                   <i className="bx bxl-youtube"></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

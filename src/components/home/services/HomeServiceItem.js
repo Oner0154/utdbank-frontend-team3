@@ -10,9 +10,7 @@ const ServiceItem = ({ title, description, image, link }) => {
         <div className="home-service-text">
           <h3>{title}</h3>
           <p>{description}</p>
-          <a href={link} target="_blank">
-            Read More +
-          </a>
+          <a href={link}>Read More +</a>
         </div>
       </div>
     </div>

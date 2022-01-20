@@ -1,15 +1,19 @@
 import React from "react";
-import PageHeader from "../components/common/PageHeader";
+
 import Contact from "../components/contact/Contact";
-import ContactForm from "../components/contact/ContactForm";
+import ContactForm from "../components/common/ContactForm";
+import PageHeader from "../components/common/PageHeader";
+import Topbar from "../components/common/Topbar";
+import Footer from "../components/common/Footer";
 
 const ContactPage = () => {
   return (
     <>
-      <PageHeader title="Contact Us" image="contact-us-bg.png" />
-
+      <Topbar />
+      <PageHeader image="contact-us-bg.png" title="Contact Us" />
       <Contact />
-      <ContactForm />
+      <ContactForm formTitle="Leave a message" buttonTitle="Send A Message" />
+      <Footer />
     </>
   );
 };

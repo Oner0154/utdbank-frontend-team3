@@ -4,16 +4,16 @@ import ServiceItem from "../services/ServiceItem";
 
 const Services = () => {
   return (
-    <section class="home-service-section p-tb-100">
-      <div class="container">
+    <section className="home-service-section p-tb-100">
+      <div className="container">
         <SectionTitle
           title="Services we are providing"
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit
             sed do eiusmod agnamqua ptatem consectetur."
         />
-        <div class="home-service-content service-page-grid">
-          <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4">
+        <div className="home-service-content service-page-grid">
+          <div className="row">
+            <div className="col-sm-12 col-md-6 col-lg-4">
               <ServiceItem
                 title="Drag and drop functionality"
                 description="Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
@@ -22,7 +22,7 @@ const Services = () => {
               />
             </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div className="col-sm-12 col-md-6 col-lg-4">
               <ServiceItem
                 title="Email notifications"
                 description="Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
@@ -31,7 +31,7 @@ const Services = () => {
               />
             </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div className="col-sm-12 col-md-6 col-lg-4">
               <ServiceItem
                 title="Deadline reminders"
                 description="Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
@@ -39,7 +39,7 @@ const Services = () => {
                 image="service3.png"
               />
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div className="col-sm-12 col-md-6 col-lg-4">
               <ServiceItem
                 title="Simple dashboard"
                 description="Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
@@ -48,7 +48,7 @@ const Services = () => {
               />
             </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div className="col-sm-12 col-md-6 col-lg-4">
               <ServiceItem
                 title="Incredible infrastructure"
                 description="Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
@@ -57,7 +57,7 @@ const Services = () => {
               />
             </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div className="col-sm-12 col-md-6 col-lg-4">
               <ServiceItem
                 title="Drag and drop functionality"
                 description="Lorem ipsum dolor sit amet, cosectetur adipisicing elit,

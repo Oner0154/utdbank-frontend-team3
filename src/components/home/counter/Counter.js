@@ -1,6 +1,6 @@
-import React from "react"
-import SectionTitle from "../common/SectionTitle"
-import CounterItem from "./CounterItem"
+import React from "react";
+import SectionTitle from "../../common/SectionTitle";
+import CounterItem from "./CounterItem";
 
 const Counter = () => {
   return (
@@ -40,7 +40,7 @@ const Counter = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Counter
+export default Counter;

@@ -1,5 +1,5 @@
-import React from "react"
-import SectionTitle from "../common/SectionTitle"
+import React from "react";
+import SectionTitle from "../../common/SectionTitle";
 
 const HomeAboutItem = ({
   title,
@@ -15,7 +15,7 @@ const HomeAboutItem = ({
 }) => {
   return (
     <div className="row align-items-center">
-      {type == 2 ? (
+      {type === 2 ? (
         <div className="col-sm-12 col-md-12 col-lg-6">
           <div className="home-about-item home-about-image pb-30 about-image-shape">
             <div className="home-image-content">
@@ -33,7 +33,7 @@ const HomeAboutItem = ({
       <div className="col-sm-12 col-md-12 col-lg-6 order-2 order-lg-1">
         <div
           className={
-            type == 1
+            type === 1
               ? "home-about-item desk-pad-right-10 pb-30"
               : "home-about-item desk-pad-left-10 pb-30"
           }
@@ -76,7 +76,7 @@ const HomeAboutItem = ({
           </div>
         </div>
       </div>
-      {type == 1 ? (
+      {type === 1 ? (
         <div className="col-sm-12 col-md-12 col-lg-6 order-1 order-lg-2">
           <div className="home-about-item home-about-image pb-30 about-image-ellipsis">
             <div className="home-image-content">
@@ -92,7 +92,7 @@ const HomeAboutItem = ({
         ""
       )}
     </div>
-  )
-}
+  );
+};
 
-export default HomeAboutItem
+export default HomeAboutItem;
