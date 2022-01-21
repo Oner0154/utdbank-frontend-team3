@@ -1,12 +1,16 @@
 import React from "react";
-import PageHeader from "../components/common/PageHeader";
 import Pricing from "../components/pricing/Pricing";
+import PageHeader from "../components/common/PageHeader";
+import Topbar from "../components/common/Topbar";
+import Footer from "../components/common/Footer";
 
 const PricingPage = () => {
   return (
     <>
-      <PageHeader title="Pricing" image="blog.png" />
+    <Topbar/>
+      <PageHeader image="blog.png" title="Pricing" />
       <Pricing />
+      <Footer/>
     </>
   );
 };

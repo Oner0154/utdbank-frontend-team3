@@ -1,7 +1,7 @@
 import React from "react";
 import SectionTitle from "../common/SectionTitle";
 
-const Pricing = () => {
+const HomePricing = () => {
   return (
     <section className="home-pricing-section p-tb-100">
       <div className="container">
@@ -179,4 +179,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default HomePricing;

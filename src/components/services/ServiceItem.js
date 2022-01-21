@@ -1,18 +1,26 @@
 import React from "react";
 
-const ServiceItem = ({ title, image, description }) => {
+import { Link } from "react-router-dom";
+
+const ServiceItem = (props) => {
+  const { image, title, description, more } = props;
+
   return (
-    <div class="home-service-item fluid-height">
-      <div class="home-service-details full-height">
-        <div class="home-service-image">
+    
+    <div className="home-service-item fluid-height">
+      <div className="home-service-details full-height">
+        <div className="home-service-image">
           <img src={`assets/images/${image}`} alt="service" />
         </div>
-        <div class="home-service-text">
+        <div className="home-service-text">
           <h3>{title}</h3>
           <p>{description}</p>
+          {more && <Link to="/service-details">Read More +</Link>}
         </div>
       </div>
     </div>
+   
+
   );
 };
 
