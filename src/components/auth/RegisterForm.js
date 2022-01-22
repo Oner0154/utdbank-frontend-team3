@@ -7,7 +7,7 @@ import { register } from "../../api/user-service";
 import { toast } from "react-toastify";
 import MaskInput from "react-maskinput";
 
-const RegisterForm = () => {
+const RegisterForm = ({ setActive }) => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const initialValues = {
@@ -53,7 +53,7 @@ const RegisterForm = () => {
       .then((resp) => {
         setLoading(false);
         toast("You are registered successfully!");
-        navigate("/authentication");
+        setActive("login");
       })
       .catch((err) => {
         toast(err.response.data.message);

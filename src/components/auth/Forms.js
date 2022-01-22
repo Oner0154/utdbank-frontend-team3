@@ -69,7 +69,7 @@ const Forms = () => {
                   data-authentcation-details="2"
                   onClick={() => setActive("register")}
                 >
-                  <RegisterForm />
+                  <RegisterForm setActive={setActive} />
                 </div>
               </div>
             </div>
