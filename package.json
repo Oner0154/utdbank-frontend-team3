@@ -9,6 +9,7 @@
     "alertifyjs": "^1.13.1",
     "axios": "^0.24.0",
     "formik": "^2.2.9",
+    "js-file-download": "^0.4.12",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.1",
