@@ -2,17 +2,7 @@ import React, { useState } from "react";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
 import { useFormik } from "formik";
-import MaskInput from "react-maskinput";
-import {
-  Form,
-  Button,
-  Spinner,
-  Row,
-  Col,
-  ButtonGroup,
-  Card,
-  FormCheck,
-} from "react-bootstrap";
+import { Form, Button, Row, Col, ButtonGroup, Card } from "react-bootstrap";
 import { createTransfer } from "../../api/transfers-service";
 import { useNavigate } from "react-router-dom";
 
@@ -111,14 +101,19 @@ const TransferNew = () => {
 
             <Form.Group as={Col} md={4} lg={3} className="mb-3">
               <Form.Label>Currency Code</Form.Label>
-              <Form.Control
+              <Form.Select
                 className="p-2"
                 style={{ border: "0.25px solid" }}
                 type="text"
                 placeholder="Enter currency code"
                 {...formik.getFieldProps("currencyCode")}
                 isInvalid={!!formik.errors.currencyCode}
-              />
+              >
+                <option>Please select a currency code</option>
+                <option>EUR</option>
+                <option>USD</option>
+                <option>TRY</option>
+              </Form.Select>
               <Form.Control.Feedback type="invalid">
                 {formik.errors.currencyCode}
               </Form.Control.Feedback>
@@ -147,7 +142,6 @@ const TransferNew = () => {
               <Button
                 variant="secondary"
                 type="button"
-                variant="secondary"
                 onClick={() => navigate("/transfer")}
               >
                 Cancel

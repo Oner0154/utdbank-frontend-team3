@@ -1,6 +1,6 @@
 import alertify from "alertifyjs";
 import React from "react";
-import { Button, Dropdown, DropdownButton } from "react-bootstrap";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useStore } from "../../store/index";
 import { logout } from "../../store/user/userAction";
@@ -23,11 +23,11 @@ const UserMenu = () => {
     );
   };
   return (
-    // <!-- USER MENU START -->
     <div className="navbar-option">
       <div className="navbar-option-item">
         {isUserLogin ? (
           <DropdownButton
+            id="dropdown-basic-button"
             title={`${user.firstName} ${user.lastName}`}
             size="sm"
             align="end"
@@ -55,7 +55,6 @@ const UserMenu = () => {
         )}
       </div>
     </div>
-    // <!-- USER MENU END -->
   );
 };
 export default UserMenu;

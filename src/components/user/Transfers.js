@@ -1,31 +1,12 @@
-import moment from "moment";
 import React, { useEffect, useState } from "react";
-import { Image, Table, Spinner, Button, ButtonGroup } from "react-bootstrap";
-import { BiMessageSquareEdit } from "react-icons/bi";
+import { Table, Spinner, Button, ButtonGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { downloadTransfers, getTransfers } from "../../api/transfers-service";
-import fileDownloader from "js-file-download";
+import { getTransfers } from "../../api/transfers-service";
 
 const Transfers = () => {
   const [loading, setLoading] = useState(true);
   const [transfers, setTransfers] = useState([]);
   const navigate = useNavigate();
-
-  const [loadingUsers, setLoadingUsers] = useState(true);
-  const [downloadingUsers, setDownloadingUsers] = useState(false);
-  const [users, setUsers] = useState([]);
-
-  const handleDownload = () => {
-    setDownloadingUsers(true);
-    downloadTransfers().then((resp) => {
-      console.log(resp.data);
-      fileDownloader(resp.data, "users.xlsx");
-      setDownloadingUsers(false);
-    });
-  };
-  const handleEdit = (transferId) => {
-    navigate(`/transfer/${transferId}`);
-  };
 
   const showDetails = (id) => {
     navigate(`/transfer/${id}`);
@@ -33,6 +14,7 @@ const Transfers = () => {
 
   useEffect(() => {
     getTransfers().then((resp) => {
+      console.log(resp.data);
       setTransfers(resp.data);
       setLoading(false);
     });
@@ -43,14 +25,6 @@ const Transfers = () => {
       <ButtonGroup aria-label="Basic example" className="p-3 ">
         <Button variant="primary" as={Link} to="/transfer/create">
           New Transfer
-        </Button>
-        <Button
-          variant="secondary"
-          disabled={downloadingUsers}
-          onClick={handleDownload}
-        >
-          {downloadingUsers && <Spinner animation="border" size="sm" />}{" "}
-          Download List
         </Button>
       </ButtonGroup>
       <Table striped bordered hover responsive>
@@ -79,11 +53,11 @@ const Transfers = () => {
               className="cursor-hand"
             >
               <td>{index + 1}</td>
-              <td>{item.fromAccountId}</td>
+              <td>{item.fromAccountId.id}</td>
               <td>{item.toAccountId}</td>
               <td>{item.transactionAmount} </td>
               <td>{item.currencyCode}</td>
-              <td> {item.description}</td>
+              <td>{item.description}</td>
             </tr>
           ))}
         </tbody>

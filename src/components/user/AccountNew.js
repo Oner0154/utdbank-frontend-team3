@@ -31,8 +31,8 @@ const AccountNew = () => {
   const validationSchema = Yup.object({
     description: Yup.string().required("Please enter a account description"),
     balance: Yup.string().required(""),
-    currencyCode: Yup.string().required("Please enter amount"),
-    accountType: Yup.string().required("Please enter currency code"),
+    currencyCode: Yup.string().required("Please enter currency code"),
+    accountType: Yup.string().required("Please enter account type"),
     accountStatusType: Yup.string().required(""),
   });
 
@@ -100,12 +100,12 @@ const AccountNew = () => {
                 style={{ border: "0.25px solid" }}
                 type="text"
                 {...formik.getFieldProps("currencyCode")}
-                isInvalid={!!formik.errors.transactionAmount}
+                isInvalid={!!formik.errors.currencyCode}
               >
                 <option>Please select a currency code</option>
-                <option value="1">EUR</option>
-                <option value="2">USD</option>
-                <option value="3">TRY</option>
+                <option>EUR</option>
+                <option>USD</option>
+                <option>TRY</option>
               </Form.Select>
               <Form.Control.Feedback type="invalid">
                 {formik.errors.currencyCode}
@@ -122,10 +122,10 @@ const AccountNew = () => {
                 isInvalid={!!formik.errors.accountType}
               >
                 <option>Please enter a account type</option>
-                <option value="1">SAVING</option>
-                <option value="2">INVESTING</option>
-                <option value="3">CREDIT-CARD</option>
-                <option value="3">CHECKING</option>
+                <option>SAVING</option>
+                <option>INVESTING</option>
+                <option>CREDIT-CARD</option>
+                <option>CHECKING</option>
               </Form.Select>
               <Form.Control.Feedback type="invalid">
                 {formik.errors.accountType}

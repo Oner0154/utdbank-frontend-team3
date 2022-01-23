@@ -16,6 +16,8 @@ import TransfersPage from "../pages/user/TransfersPage";
 import TransfersNewPage from "../pages/user/TransfersNewPage";
 import AccountsPage from "../pages/user/AccountsPage";
 import AccountsNewPage from "../pages/user/AccountsNewPage";
+import AccountDetailsPage from "../pages/user/AccountDetailsPage";
+import TransferDetailsPage from "../pages/user/TransferDetailsPage";
 
 const CustomRoutes = () => {
   return (
@@ -31,6 +33,7 @@ const CustomRoutes = () => {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/about" element={<AboutUsPage />} />
       <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<HomePage />} />
 
       {/* CUSTOMER ROUTES */}
       <Route
@@ -71,6 +74,22 @@ const CustomRoutes = () => {
         element={
           <PrivateRoute>
             <AccountsNewPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/account/:accountId"
+        element={
+          <PrivateRoute>
+            <AccountDetailsPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/transfer/:transferId"
+        element={
+          <PrivateRoute>
+            <TransferDetailsPage />
           </PrivateRoute>
         }
       />

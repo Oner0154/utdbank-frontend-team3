@@ -10,7 +10,6 @@ const TransfersPage = () => {
     <>
       <Topbar />
       <PageHeader title="Transfers" />
-
       <Container>
         <Row>
           <Col>

@@ -15,21 +15,10 @@ const getAccounts = () => {
   });
 };
 
-const getAccountById = (AccountId) => {
-  return axios.get(`${API_URL}accounts/${AccountId}`, {
+const getAccountById = (accountId) => {
+  return axios.get(`${API_URL}account/${accountId}/user`, {
     headers: authHeader(),
   });
 };
 
-const downloadAccounts = () => {
-  return axios.get(`${API_URL}excel/download/account`, {
-    headers: {
-      ...authHeader(),
-      "Content-Type":
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    },
-    responseType: "arraybuffer",
-  });
-};
-
-export { createAccount, getAccounts, getAccountById, downloadAccounts };
+export { createAccount, getAccounts, getAccountById };

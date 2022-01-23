@@ -10,7 +10,6 @@ const AccountsPage = () => {
     <>
       <Topbar />
       <PageHeader title="Accounts" />
-
       <Container>
         <Row>
           <Col>
