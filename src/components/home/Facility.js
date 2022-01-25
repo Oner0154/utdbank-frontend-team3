@@ -39,7 +39,7 @@ const Facility = () => {
                         tempora incidunt ut labore et dolore magnam
                       </p>
                       <Link
-                        to="/"
+                        to="/authentication"
                         className="btn1 blue-gradient btn-with-image"
                       >
                         <i className="flaticon-login"></i>

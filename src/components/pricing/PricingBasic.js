@@ -99,15 +99,14 @@ const PricingBasic = () => {
               Email Integration
             </li>
           </ul>
-          <button
-            as={Link}
+          <Link
             to="/authentication"
             className="btn1 orange-gradient btn-with-image"
           >
             <i className="flaticon-login"></i>
             <i className="flaticon-login"></i>
             Get started
-          </button>
+          </Link>
         </div>
       </div>
     </div>

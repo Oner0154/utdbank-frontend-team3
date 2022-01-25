@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HomeContact = () => {
   return (
     // <!-- HOME CONTACT START -->
-    <section className="home-quick-contact-section section-minus-margin">
+    <section className="home-quick-contact-section">
       <div className="container">
         <div className="home-quick-contact blue-gradient">
           <div className="logo-bg-icon">

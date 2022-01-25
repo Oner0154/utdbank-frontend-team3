@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Footer from "../../components/common/Footer";
 import PageHeader from "../../components/common/PageHeader";
 import Spacer from "../../components/common/Spacer";
 import Topbar from "../../components/common/Topbar";
@@ -10,7 +11,6 @@ const TransfersPage = () => {
     <>
       <Topbar />
       <PageHeader title="Transfers" />
-
       <Container>
         <Row>
           <Col>
@@ -19,6 +19,7 @@ const TransfersPage = () => {
         </Row>
       </Container>
       <Spacer />
+      <Footer />
     </>
   );
 };

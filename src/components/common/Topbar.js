@@ -29,7 +29,7 @@ const Topbar = () => {
       <div className="navbar-area">
         <div className="mobile-nav">
           <Link to="/" className="logo">
-            <img src="assets/images/logo.png" alt="logo" />
+            <img src="/assets/images/logo.png" alt="logo" />
           </Link>
           <div className="navbar-option">
             <div className="navbar-option-item">
@@ -54,13 +54,13 @@ const Topbar = () => {
         <Dropdown.Divider />
       </>
     )} */}
-                  <Dropdown.Item as={Link} to="/user/profile">
+                  <Dropdown.Item as={Link} to="/profile">
                     My Profile
                   </Dropdown.Item>
-                  <Dropdown.Item as={Link} to="/user/accounts">
+                  <Dropdown.Item as={Link} to="/account">
                     My Accounts
                   </Dropdown.Item>
-                  <Dropdown.Item as={Link} to="/user/transfers">
+                  <Dropdown.Item as={Link} to="/transfer">
                     My Transfers
                   </Dropdown.Item>
                   <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
