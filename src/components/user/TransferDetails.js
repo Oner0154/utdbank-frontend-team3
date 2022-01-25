@@ -1,22 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Table, Button } from "react-bootstrap";
-import { FiArrowLeft } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
-import { getTransferById } from "../../api/transfers-service";
-
+import React, { useEffect, useState } from "react"
+import { Container, Row, Col, Table, Button } from "react-bootstrap"
+import { FiArrowLeft } from "react-icons/fi"
+import { useNavigate } from "react-router-dom"
+import { getTransferById } from "../../api/transfers-service"
 const TransferDetails = ({ transferId }) => {
-  const [loading, setLoading] = useState(true);
-  const [transfer, setTransfer] = useState({});
-  const navigate = useNavigate();
-
+  const [loading, setLoading] = useState(true)
+  const [transfer, setTransfer] = useState({})
+  const navigate = useNavigate()
   useEffect(() => {
     getTransferById(transferId).then((resp) => {
-      console.log(resp.data);
-      setTransfer(resp.data);
-      setLoading(false);
-    });
-  }, []);
-
+      console.log(resp.data)
+      setTransfer(resp.data)
+      setLoading(false)
+    })
+  }, [])
   return (
     <Container>
       {!loading && (
@@ -33,7 +30,7 @@ const TransferDetails = ({ transferId }) => {
               <tbody>
                 <tr>
                   <td>From Account Id</td>
-                  <td>{transfer.fromAccountId.id}</td>
+                  <td>{transfer.fromAccountId}</td>
                 </tr>
                 <tr>
                   <td>To Account Id</td>
@@ -62,7 +59,6 @@ const TransferDetails = ({ transferId }) => {
         </Row>
       )}
     </Container>
-  );
-};
-
-export default TransferDetails;
+  )
+}
+export default TransferDetails

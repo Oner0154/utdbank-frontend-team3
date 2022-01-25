@@ -9,7 +9,7 @@ const Menu = () => {
       <div className="container-fluid">
         <nav className="navbar navbar-expand-md navbar-light">
           <Link to="/" className="navbar-brand">
-            <img src="assets/images/logo.png" alt="logo" />
+            <img src="/assets/images/logo.png" alt="logo" />
           </Link>
 
           <div
@@ -18,11 +18,7 @@ const Menu = () => {
           >
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-
                 <Link to="/" className="nav-link active">
-
-                
-
                   Home
                 </Link>
               </li>

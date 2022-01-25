@@ -29,7 +29,7 @@ const Topbar = () => {
       <div className="navbar-area">
         <div className="mobile-nav">
           <Link to="/" className="logo">
-            <img src="assets/images/logo.png" alt="logo" />
+            <img src="/assets/images/logo.png" alt="logo" />
           </Link>
           <div className="navbar-option">
             <div className="navbar-option-item">

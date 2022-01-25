@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import * as Yup from "yup";
-import { toast } from "react-toastify";
-import { useFormik } from "formik";
-import MaskInput from "react-maskinput";
+import React, { useState } from "react"
+import * as Yup from "yup"
+import { toast } from "react-toastify"
+import { useFormik } from "formik"
+import MaskInput from "react-maskinput"
 import {
   Form,
   Button,
@@ -12,53 +12,46 @@ import {
   ButtonGroup,
   Card,
   FormCheck,
-} from "react-bootstrap";
-import { createAccount } from "../../api/accounts-service";
-import { useNavigate } from "react-router-dom";
-
+} from "react-bootstrap"
+import { createAccount } from "../../api/accounts-service"
+import { useNavigate } from "react-router-dom"
 const AccountNew = () => {
-  const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
-
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
   const initialValues = {
     description: "",
     balance: "",
     currencyCode: "",
     accountType: "",
     accountStatusType: "",
-  };
-
+  }
   const validationSchema = Yup.object({
     description: Yup.string().required("Please enter a account description"),
     balance: Yup.string().required(""),
     currencyCode: Yup.string().required("Please enter currency code"),
     accountType: Yup.string().required("Please enter account type"),
     accountStatusType: Yup.string().required(""),
-  });
-
+  })
   const onSubmit = (values) => {
-    setLoading(true);
-
+    setLoading(true)
     createAccount(values)
       .then((resp) => {
-        setLoading(false);
-        toast("Account has been created successfully");
-        navigate("/account");
+        setLoading(false)
+        toast("Account has been created successfully")
+        navigate("/account")
       })
       .catch((err) => {
-        toast("An error occured");
-        console.log(err.response.data.message);
-        setLoading(false);
-      });
-  };
-
+        toast("An error occured")
+        console.log(err.response.data.message)
+        setLoading(false)
+      })
+  }
   const formik = useFormik({
     enableReinitialize: true,
     initialValues,
     validationSchema,
     onSubmit,
-  });
-
+  })
   return (
     <Form noValidate onSubmit={formik.handleSubmit}>
       <Card>
@@ -78,7 +71,6 @@ const AccountNew = () => {
                 {formik.errors.description}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md={4} lg={3} className="mb-3">
               <Form.Label>Balance</Form.Label>
               <Form.Control
@@ -92,7 +84,6 @@ const AccountNew = () => {
                 {formik.errors.balance}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md={4} lg={3} className="mb-3">
               <Form.Label>Currency Code</Form.Label>
               <Form.Select
@@ -111,7 +102,6 @@ const AccountNew = () => {
                 {formik.errors.currencyCode}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md={4} lg={3} className="mb-3">
               <Form.Label>Account Type</Form.Label>
               <Form.Select
@@ -124,14 +114,13 @@ const AccountNew = () => {
                 <option>Please enter a account type</option>
                 <option>SAVING</option>
                 <option>INVESTING</option>
-                <option>CREDIT-CARD</option>
+                <option>CREDIT_CARD</option>
                 <option>CHECKING</option>
               </Form.Select>
               <Form.Control.Feedback type="invalid">
                 {formik.errors.accountType}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md={4} lg={3} className="mb-3">
               <Form.Label>Account Status Type</Form.Label>
               <Form.Select
@@ -142,9 +131,9 @@ const AccountNew = () => {
                 isInvalid={!!formik.errors.accountStatusType}
               >
                 <option>Please enter account status type</option>
-                <option value="1">SUSPENDED</option>
-                <option value="2">CLOSED</option>
-                <option value="3">ACTIVE</option>
+                <option>SUSPENDED</option>
+                <option>CLOSED</option>
+                <option>ACTIVE</option>
               </Form.Select>
               <Form.Control.Feedback type="invalid">
                 {formik.errors.accountStatusType}
@@ -169,7 +158,6 @@ const AccountNew = () => {
         </Card.Body>
       </Card>
     </Form>
-  );
-};
-
-export default AccountNew;
+  )
+}
+export default AccountNew

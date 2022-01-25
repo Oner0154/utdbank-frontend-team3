@@ -11,9 +11,9 @@ const Footer = () => {
             <div className="col-sm-12 col-md-12 col-lg-4">
               <div className="footer-content-item">
                 <div className="footer-logo">
-                  <a href="index.html">
+                  <Link to="/">
                     <img src="assets/images/logo-white.png" alt="logo" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="footer-details">
                   <p>
@@ -82,7 +82,10 @@ const Footer = () => {
                   <li>
                     Message:
                     <span>
-                      <Link to="/cdn-cgi/l/email-protection#96fff8f0f9d6f7fafff7b8f5f9fb">
+                      <Link
+                        to="/cdn-cgi/l/email-protection#96fff8f0f9d6f7fafff7b8f5f9fb"
+                        target="_blank"
+                      >
                         <span
                           className="__cf_email__"
                           data-cfemail="224b4c444d62434e4b430c414d4f"
@@ -95,7 +98,9 @@ const Footer = () => {
                   <li>
                     Phone:
                     <span>
-                      <Link to="tel:(+00)67834598">(+00) 678 345 98</Link>
+                      <Link to="tel:(+00)67834598" target="_blank">
+                        (+00) 678 345 98
+                      </Link>
                     </span>
                   </li>
                   <li>

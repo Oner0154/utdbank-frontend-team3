@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Banner = () => {
   return (
@@ -15,11 +16,14 @@ export const Banner = () => {
               </p>
               <ul className="section-button">
                 <li>
-                  <button className="btn1 orange-gradient btn-with-image">
+                  <Link
+                    to="/authentication"
+                    className="btn1 orange-gradient btn-with-image"
+                  >
                     <i className="flaticon-login"></i>
                     <i className="flaticon-login"></i>
                     Get started
-                  </button>
+                  </Link>
                 </li>
               </ul>
             </div>

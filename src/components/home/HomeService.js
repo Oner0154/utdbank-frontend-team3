@@ -23,7 +23,7 @@ const HomeService = () => {
                   {/* <!-- SECTION TITLE END --> */}
 
                   <Link
-                    to="/service"
+                    to="/authentication"
                     className="btn1 blue-gradient btn-with-image"
                   >
                     <i className="flaticon-login"></i>

@@ -6,7 +6,6 @@ const ServiceItem = (props) => {
   const { image, title, description, more } = props;
 
   return (
-    
     <div className="home-service-item fluid-height">
       <div className="home-service-details full-height">
         <div className="home-service-image">
@@ -15,12 +14,10 @@ const ServiceItem = (props) => {
         <div className="home-service-text">
           <h3>{title}</h3>
           <p>{description}</p>
-          {more && <Link to="/service-details">Read More +</Link>}
+          {more && <Link to="/service">Read More +</Link>}
         </div>
       </div>
     </div>
-   
-
   );
 };
 

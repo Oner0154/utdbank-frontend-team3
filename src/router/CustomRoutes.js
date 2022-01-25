@@ -1,23 +1,23 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import ForgetPasswordPage from "../pages/ForgetPasswordPage";
-import AuthenticationPage from "../pages/Authentication";
-import FaqsPage from "../pages/FaqsPage";
-import ServicePage from "../pages/ServicePage";
-import PricingPage from "../pages/PricingPage";
-import HomePage from "../pages/HomePage";
-import AboutUsPage from "../pages/AboutUsPage";
-import ContactPage from "../pages/ContactPage";
-import PrivacyPolicyPage from "../pages/PrivacyPolicyPage";
-import TermsPage from "../pages/TermsPage";
-import PrivateRoute from "./PrivateRoutes";
-import ProfilePage from "../pages/user/ProfilePage";
-import TransfersPage from "../pages/user/TransfersPage";
-import TransfersNewPage from "../pages/user/TransfersNewPage";
-import AccountsPage from "../pages/user/AccountsPage";
-import AccountsNewPage from "../pages/user/AccountsNewPage";
-import AccountDetailsPage from "../pages/user/AccountDetailsPage";
-import TransferDetailsPage from "../pages/user/TransferDetailsPage";
+import React from "react"
+import { Route, Routes } from "react-router-dom"
+import ForgetPasswordPage from "../pages/ForgetPasswordPage"
+import AuthenticationPage from "../pages/AuthenticationPage"
+import FaqsPage from "../pages/FaqsPage"
+import ServicePage from "../pages/ServicePage"
+import PricingPage from "../pages/PricingPage"
+import HomePage from "../pages/HomePage"
+import AboutUsPage from "../pages/AboutUsPage"
+import ContactPage from "../pages/ContactPage"
+import PrivacyPolicyPage from "../pages/PrivacyPolicyPage"
+import TermsPage from "../pages/TermsPage"
+import PrivateRoute from "./PrivateRoute"
+import ProfilePage from "../pages/user/ProfilePage"
+import TransfersPage from "../pages/user/TransfersPage"
+import TransfersNewPage from "../pages/user/TransfersNewPage"
+import AccountsPage from "../pages/user/AccountsPage"
+import AccountsNewPage from "../pages/user/AccountsNewPage"
+import TransferDetailsPage from "../pages/user/TransferDetailsPage"
+import AccountEditPage from "../pages/user/AccountEditPage"
 
 const CustomRoutes = () => {
   return (
@@ -33,7 +33,6 @@ const CustomRoutes = () => {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/about" element={<AboutUsPage />} />
       <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<HomePage />} />
 
       {/* CUSTOMER ROUTES */}
       <Route
@@ -78,13 +77,14 @@ const CustomRoutes = () => {
         }
       />
       <Route
-        path="/account/:accountId"
+        path="/account/:accountNo/user"
         element={
           <PrivateRoute>
-            <AccountDetailsPage />
+            <AccountEditPage />
           </PrivateRoute>
         }
       />
+
       <Route
         path="/transfer/:transferId"
         element={
@@ -94,7 +94,7 @@ const CustomRoutes = () => {
         }
       />
     </Routes>
-  );
-};
+  )
+}
 
-export default CustomRoutes;
+export default CustomRoutes

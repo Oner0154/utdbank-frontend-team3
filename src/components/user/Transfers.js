@@ -1,25 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Table, Spinner, Button, ButtonGroup } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import { getTransfers } from "../../api/transfers-service";
-
+import React, { useEffect, useState } from "react"
+import { Table, Spinner, Button, ButtonGroup } from "react-bootstrap"
+import { Link, useNavigate } from "react-router-dom"
+import { getTransfers } from "../../api/transfers-service"
 const Transfers = () => {
-  const [loading, setLoading] = useState(true);
-  const [transfers, setTransfers] = useState([]);
-  const navigate = useNavigate();
-
+  const [loading, setLoading] = useState(true)
+  const [transfers, setTransfers] = useState([])
+  const navigate = useNavigate()
   const showDetails = (id) => {
-    navigate(`/transfer/${id}`);
-  };
-
+    navigate(`/transfer/${id}`)
+  }
   useEffect(() => {
     getTransfers().then((resp) => {
-      console.log(resp.data);
-      setTransfers(resp.data);
-      setLoading(false);
-    });
-  }, []);
-
+      console.log(resp.data)
+      setTransfers(resp.data)
+      setLoading(false)
+    })
+  }, [])
   return (
     <>
       <ButtonGroup aria-label="Basic example" className="p-3 ">
@@ -52,18 +48,17 @@ const Transfers = () => {
               onClick={() => showDetails(item.id)}
               className="cursor-hand"
             >
-              <td>{index + 1}</td>
-              <td>{item.fromAccountId.id}</td>
-              <td>{item.toAccountId}</td>
-              <td>{item.transactionAmount} </td>
-              <td>{item.currencyCode}</td>
-              <td>{item.description}</td>
+              <td style={{ cursor: "pointer" }}>{index + 1}</td>
+              <td style={{ cursor: "pointer" }}>{item.fromAccountId}</td>
+              <td style={{ cursor: "pointer" }}>{item.toAccountId}</td>
+              <td style={{ cursor: "pointer" }}>{item.transactionAmount} </td>
+              <td style={{ cursor: "pointer" }}>{item.currencyCode}</td>
+              <td style={{ cursor: "pointer" }}>{item.description}</td>
             </tr>
           ))}
         </tbody>
       </Table>
     </>
-  );
-};
-
-export default Transfers;
+  )
+}
+export default Transfers

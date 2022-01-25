@@ -14,47 +14,54 @@ const Service = () => {
 
         <div className="home-service-content service-page-grid">
           <div className="row">
-            <ServiceItem
-              image="service1.png"
-              title="Drag and drop functionality"
-              description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
+            <div className="col-sm-12 col-md-6 col-lg-4">
+              <ServiceItem
+                image="service1.png"
+                title="Drag and drop functionality"
+                description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
                       sed deimod empor inddunt ut ualor sit amet"
-            />
-
-            <ServiceItem
-              image="service2.png"
-              title="Email notifications"
-              description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
+              />
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-4">
+              <ServiceItem
+                image="service2.png"
+                title="Email notifications"
+                description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
                       sed deimod empor inddunt ut ualor sit amet"
-            />
-
-            <ServiceItem
-              image="service3.png"
-              title="Deadline reminders"
-              description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
+              />
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-4">
+              <ServiceItem
+                image="service3.png"
+                title="Deadline reminders"
+                description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
                       sed deimod empor inddunt ut ualor sit amet"
-            />
-
-            <ServiceItem
-              image="service4.png"
-              title="Simple dashboard"
-              description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
+              />
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-4">
+              <ServiceItem
+                image="service4.png"
+                title="Simple dashboard"
+                description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
                       sed deimod empor inddunt ut ualor sit amet"
-            />
-
-            <ServiceItem
-              image="service5.png"
-              title="Incredible infrastructure"
-              description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
+              />
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-4">
+              <ServiceItem
+                image="service5.png"
+                title="Incredible infrastructure"
+                description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
                       sed deimod empor inddunt ut ualor sit amet"
-            />
-
-            <ServiceItem
-              image="service6.png"
-              title="Drag and drop functionality"
-              description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
+              />
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-4">
+              <ServiceItem
+                image="service1.png"
+                title="Drag and drop functionality"
+                description="  Lorem ipsum dolor sit amet, cosectetur adipisicing elit,
                       sed deimod empor inddunt ut ualor sit amet"
-            />
+              />
+            </div>
           </div>
         </div>
       </div>
