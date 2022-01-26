@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { Form, Spinner } from "react-bootstrap";
-import { register } from "../../api/user-service";
-import { toast } from "react-toastify";
-import MaskInput from "react-maskinput";
+import React, { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { useFormik } from "formik"
+import * as Yup from "yup"
+import { Form, Spinner } from "react-bootstrap"
+import { register } from "../../api/user-service"
+import { toast } from "react-toastify"
+import MaskInput from "react-maskinput"
 
 const RegisterForm = ({ setActive }) => {
-  const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
   const initialValues = {
     ssn: "",
     password: "",
@@ -19,7 +19,7 @@ const RegisterForm = ({ setActive }) => {
     email: "",
     address: "",
     mobilePhoneNumber: "",
-  };
+  }
   const validationSchema = Yup.object({
     ssn: Yup.string()
       .required("Please enter a ssn.")
@@ -43,28 +43,28 @@ const RegisterForm = ({ setActive }) => {
         "Please enter a valid phonenumber",
         (value) => value && !value.includes("_")
       ),
-  });
+  })
 
   const onSubmit = (values) => {
-    console.log(values);
-    setLoading(true);
+    console.log(values)
+    setLoading(true)
 
     register(values)
       .then((resp) => {
-        setLoading(false);
-        toast("You are registered successfully!");
-        setActive("login");
+        setLoading(false)
+        toast("You are registered successfully!")
+        setActive("login")
       })
       .catch((err) => {
-        toast(err.response.data.message);
-        setLoading(false);
-      });
-  };
+        toast(err.response.data.message)
+        setLoading(false)
+      })
+  }
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit,
-  });
+  })
   return (
     <div className="authentication-form">
       <Form noValidate onSubmit={formik.handleSubmit}>
@@ -259,6 +259,6 @@ const RegisterForm = ({ setActive }) => {
         </div>
       </Form>
     </div>
-  );
-};
-export default RegisterForm;
+  )
+}
+export default RegisterForm

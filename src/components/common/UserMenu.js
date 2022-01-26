@@ -1,27 +1,28 @@
-import alertify from "alertifyjs";
-import React from "react";
-import { Dropdown, DropdownButton } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import { useStore } from "../../store/index";
-import { logout } from "../../store/user/userAction";
+import alertify from "alertifyjs"
+import React from "react"
+import { Dropdown, DropdownButton } from "react-bootstrap"
+import { Link, useNavigate } from "react-router-dom"
+import { useStore } from "../../store/index"
+import { logout } from "../../store/user/userAction"
+import { isManager, isEmployee } from "../../utils/auth"
 const UserMenu = () => {
-  const { userState, dispatchUser } = useStore();
-  const { user, isUserLogin } = userState;
-  const navigate = useNavigate();
+  const { userState, dispatchUser } = useStore()
+  const { user, isUserLogin } = userState
+  const navigate = useNavigate()
   const handleLogout = () => {
     alertify.confirm(
       "Logout",
       "Are you sure want to logout?",
       () => {
-        dispatchUser(logout());
-        localStorage.removeItem("token");
-        navigate("/");
+        dispatchUser(logout())
+        localStorage.removeItem("token")
+        navigate("/")
       },
       () => {
-        console.log("canceled");
+        console.log("canceled")
       }
-    );
-  };
+    )
+  }
   return (
     <div className="navbar-option">
       <div className="navbar-option-item">
@@ -32,6 +33,25 @@ const UserMenu = () => {
             size="sm"
             align="end"
           >
+            {isEmployee(user.roles) && (
+              <>
+                <Dropdown.Item as={Link} to="/employee/accounts">
+                  Accounts
+                </Dropdown.Item>
+
+                <Dropdown.Divider />
+              </>
+            )}
+            {isManager(user.roles) && (
+              <>
+                <Dropdown.Item as={Link} to="/manager/accounts">
+                  Accounts
+                </Dropdown.Item>
+
+                <Dropdown.Divider />
+              </>
+            )}
+
             <Dropdown.Item as={Link} to="/profile">
               Profile
             </Dropdown.Item>
@@ -55,6 +75,6 @@ const UserMenu = () => {
         )}
       </div>
     </div>
-  );
-};
-export default UserMenu;
+  )
+}
+export default UserMenu
