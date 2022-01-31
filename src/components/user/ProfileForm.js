@@ -27,7 +27,13 @@ const ProfileForm = ({ user }) => {
     ssn: Yup.string().required("Please enter your ssn"),
     firstName: Yup.string().required("Please enter your first name"),
     lastName: Yup.string().required("Please enter your last name"),
-    phoneNumber: Yup.string().required("Please enter your phone number"),
+    mobilePhoneNumber: Yup.string()
+      .required("Please enter your phone number")
+      .test(
+        "includes_",
+        "Please enter a valid phone number.",
+        (value) => value && !value.includes("_")
+      ),
     email: Yup.string().email().required("Please enter your email"),
     address: Yup.string().required("Please enter your address"),
   });
@@ -40,7 +46,7 @@ const ProfileForm = ({ user }) => {
     setLoading(true);
     updateUser(values)
       .then((resp) => {
-        toast("Your profile updated successfully");
+        toast("Your profile has been updated successfully");
         setLoading(false);
       })
       .catch((err) => {
@@ -112,14 +118,14 @@ const ProfileForm = ({ user }) => {
           type="text"
           placeholder="Enter phone number"
           as={MaskInput}
-          alwaysShowMask
+          showMask
           maskChar="_"
           mask="(000) 000-0000"
-          {...formik.getFieldProps("phoneNumber")}
-          isInvalid={!!formik.errors.phoneNumber}
+          {...formik.getFieldProps("mobilePhoneNumber")}
+          isInvalid={!!formik.errors.mobilePhoneNumber}
         />
         <Form.Control.Feedback type="invalid">
-          {formik.errors.phoneNumber}
+          {formik.errors.mobilePhoneNumber}
         </Form.Control.Feedback>
       </Form.Group>
 
@@ -131,6 +137,7 @@ const ProfileForm = ({ user }) => {
           type="email"
           placeholder="Enter email"
           value={formik.values.email}
+          disabled
         />
       </Form.Group>
 

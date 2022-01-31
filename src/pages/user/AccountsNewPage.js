@@ -10,7 +10,10 @@ const AccountsNewPage = () => {
   return (
     <>
       <Topbar />
-      <PageHeader title="Account Creat" />
+      <PageHeader
+        title="Create Account"
+        image="accounts-pageheader-background-enginakyurt.jpg"
+      />
       <Spacer />
       <Container>
         <AccountNew />

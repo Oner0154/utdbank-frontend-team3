@@ -32,6 +32,7 @@ const Contact = () => {
                   <p className="box-card-para">
                     <Link
                       to="/cdn-cgi/l/email-protection#7e171018113e1f12171f501d1113"
+                      target="_blank"
                       className="link-us"
                     >
                       <span
@@ -45,6 +46,7 @@ const Contact = () => {
                   <p className="box-card-para">
                     <Link
                       to="/cdn-cgi/l/email-protection#82f1f7f2f2edf0f6c2e3eeebe3ace1edef"
+                      target="_blank"
                       className="link-us"
                     >
                       <span
@@ -68,7 +70,11 @@ const Contact = () => {
                 <div className="box-card-details">
                   <h3 className="box-card-title mb-20">Phone</h3>
                   <p className="box-card-para">
-                    <Link to="tel:(+00)67834598" className="link-us">
+                    <Link
+                      to="tel:(+00)67834598"
+                      target="_blank"
+                      className="link-us"
+                    >
                       (+00) 678 345 98
                     </Link>
                   </p>

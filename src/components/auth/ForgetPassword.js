@@ -6,13 +6,11 @@ import { Link } from "react-router-dom";
 
 const ForgetPassword = () => {
   const initialValues = {
-    ssn: "",
+    email: "",
   };
 
   const validationSchema = Yup.object({
-    ssn: Yup.string()
-      .required("Please enter User Name Or Email Address")
-      .min(10),
+    email: Yup.string().required("Please enter User Name Or Email Address"),
   });
 
   const onSubmit = (values) => {
@@ -52,13 +50,15 @@ const ForgetPassword = () => {
                           </span>
                         </label>
                         <Form.Control
-                          type="text"
+                          style={{ width: "auto" }}
+                          type="email"
                           className="input-full"
-                          {...formik.getFieldProps("ssn")}
-                          isInvalid={!!formik.errors.ssn}
+                          placeholder="Please enter your email!"
+                          {...formik.getFieldProps("email")}
+                          isInvalid={!!formik.errors.email}
                         />
                         <Form.Control.Feedback type="invalid">
-                          {formik.errors.ssn}
+                          {formik.errors.email}
                         </Form.Control.Feedback>
                       </div>
                     </div>

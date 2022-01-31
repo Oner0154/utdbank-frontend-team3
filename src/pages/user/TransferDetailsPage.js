@@ -12,7 +12,7 @@ const AccountsNewPage = () => {
   return (
     <>
       <Topbar />
-      <PageHeader title="Transfer Details" />
+      <PageHeader title="Transfer Details" image="money-transfer.jpg" />
       <Spacer />
       <Container>
         <TransferDetails transferId={transferId} />
