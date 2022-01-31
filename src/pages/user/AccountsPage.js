@@ -10,7 +10,11 @@ const AccountsPage = () => {
   return (
     <>
       <Topbar />
-      <PageHeader title="Accounts" />
+      <PageHeader
+        title="Accounts"
+        image="accounts-pageheader-background-enginakyurt.jpg"
+      />
+      <Spacer />
       <Container>
         <Row>
           <Col>

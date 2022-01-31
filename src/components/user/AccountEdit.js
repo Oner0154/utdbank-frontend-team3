@@ -1,81 +1,81 @@
-import React, { useState, useEffect } from "react"
-import * as Yup from "yup"
-import { toast } from "react-toastify"
-import { useFormik } from "formik"
-import { Form, Button, Spinner, Row, Col, ButtonGroup } from "react-bootstrap"
-import alertify from "alertifyjs"
-import { useNavigate, useParams } from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import * as Yup from "yup";
+import { toast } from "react-toastify";
+import { useFormik } from "formik";
+import { Form, Button, Spinner, Row, Col, ButtonGroup } from "react-bootstrap";
+import alertify from "alertifyjs";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   deleteAccount,
   getAccountById,
   updateAccount,
-} from "../../api/accounts-service"
-const AccountEdit = () => {
+} from "../../api/accounts-service";
+const AccountEdit = ({}) => {
   const [initialValues, setInitialValues] = useState({
     description: "",
     currencyCode: "",
     accountType: "",
     accountStatusType: "",
-  })
-  const [loading, setLoading] = useState(false)
-  const { accountNo } = useParams()
-  const navigate = useNavigate()
+  });
+  const [loading, setLoading] = useState(false);
+  const { accountNo } = useParams();
+  const navigate = useNavigate();
   const validationSchema = Yup.object({
     description: Yup.string().required("Enter a description"),
     currencyCode: Yup.string().required("Enter the currency code"),
     accountType: Yup.string().required("Enter the account type"),
     accountStatusType: Yup.string().required("Select the account status type"),
-  })
+  });
   const onSubmit = (values) => {
-    setLoading(true)
+    setLoading(true);
     const accountDto = {
       description: values.description,
       currencyCode: values.currencyCode,
       accountType: values.accountType,
       accountStatusType: values.accountStatusType,
-    }
+    };
     updateAccount(accountNo, accountDto)
       .then((resp) => {
-        setLoading(false)
-        toast("The account was updated successfully")
-        navigate("/account")
+        setLoading(false);
+        toast("The account was updated successfully");
+        navigate("/account");
       })
       .catch((err) => {
-        toast("An error occured while updating the Account")
-        console.log(err.response.data.message)
-        setLoading(false)
-      })
-  }
+        toast("An error occured while updating the Account");
+        console.log(err.response.data.message);
+        setLoading(false);
+      });
+  };
   const formik = useFormik({
     enableReinitialize: true,
     initialValues,
     validationSchema,
     onSubmit,
-  })
+  });
   const handleDelete = () => {
     alertify.confirm(
       "Delete",
       "Are you sure want to delete?",
       () => {
-        setLoading(true)
+        setLoading(true);
         deleteAccount(accountNo)
           .then((resp) => {
-            toast("The account was deleted successfully")
-            setLoading(false)
-            navigate("/account")
+            toast("The account was deleted successfully");
+            setLoading(false);
+            navigate("/account");
           })
           .catch((err) => {
-            toast(err.response.data.message)
-            console.log(err.response.data.message)
-            setLoading(false)
-          })
+            toast(err.response.data.message);
+            console.log(err.response.data.message);
+            setLoading(false);
+          });
       },
       () => {}
-    )
-  }
+    );
+  };
   const loadAccount = (values) => {
     getAccountById(accountNo, values).then((resp) => {
-      console.log(resp.data)
+      console.log(resp.data);
       const {
         description,
         currencyCode,
@@ -83,7 +83,7 @@ const AccountEdit = () => {
         accountStatusType,
         balance,
         accountNo,
-      } = resp.data
+      } = resp.data;
       const accountDto = {
         description: description,
         currencyCode: currencyCode,
@@ -91,13 +91,13 @@ const AccountEdit = () => {
         accountStatusType: accountStatusType,
         balance: balance,
         accountNo: accountNo,
-      }
-      setInitialValues(accountDto)
-    })
-  }
+      };
+      setInitialValues(accountDto);
+    });
+  };
   useEffect(() => {
-    loadAccount()
-  }, [])
+    loadAccount();
+  }, []);
   return (
     <Form noValidate onSubmit={formik.handleSubmit}>
       <Row>
@@ -229,6 +229,6 @@ const AccountEdit = () => {
         </ButtonGroup>
       </div>
     </Form>
-  )
-}
-export default AccountEdit
+  );
+};
+export default AccountEdit;

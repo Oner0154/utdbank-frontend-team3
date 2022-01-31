@@ -10,7 +10,8 @@ const TransfersPage = () => {
   return (
     <>
       <Topbar />
-      <PageHeader title="Transfers" />
+      <PageHeader title="Transfers" image="money-transfer.jpg" />
+      <Spacer />
       <Container>
         <Row>
           <Col>

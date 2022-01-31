@@ -4,6 +4,7 @@ import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useStore } from "../../store";
 import { logout } from "../../store/user/userAction";
+import { isEmployee, isManager } from "../../utils/auth";
 import Menu from "./Menu";
 const Topbar = () => {
   const { userState, dispatchUser } = useStore();
@@ -40,6 +41,34 @@ const Topbar = () => {
                   size="sm"
                   align="end"
                 >
+                  {isEmployee(user.roles) && (
+                    <>
+                      <Dropdown.Item as={Link} to="/employee/users">
+                        User Management
+                      </Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/employee/accounts">
+                        Account Management
+                      </Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/transfer/employee/all">
+                        Transfer Management
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                    </>
+                  )}
+                  {isManager(user.roles) && (
+                    <>
+                      <Dropdown.Item as={Link} to="/manager/users">
+                        User Management
+                      </Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/manager/accounts">
+                        Account Management
+                      </Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/transfer/manager/all">
+                        Transfer Management
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                    </>
+                  )}
                   {/* {isAdmin(user.roles) && (
       <>
         <Dropdown.Item as={Link} to="/admin/users">

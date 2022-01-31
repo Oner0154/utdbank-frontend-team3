@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
 import Footer from "../../components/common/Footer";
 import PageHeader from "../../components/common/PageHeader";
@@ -16,7 +16,8 @@ const ProfilePage = () => {
   return (
     <>
       <Topbar />
-      <PageHeader title="Profile" />
+      <PageHeader title="Profile" image="profile-pageheader-background.jpg" />
+      <Spacer />
       <Container>
         <Row>
           <Col md={2} style={{ textAlign: "center" }}>
@@ -28,15 +29,23 @@ const ProfilePage = () => {
           </Col>
           <Col md={1}></Col>
           <Col md={4} className="mt-5 mt-md-0">
-            <h3 className="mb-3">Profile</h3>
+            <Card>
+              <Card.Body>
+                <h3 className="mb-3">Profile</h3>
 
-            <ProfileForm user={user} />
+                <ProfileForm user={user} />
+              </Card.Body>
+            </Card>
           </Col>
           <Col md={1}></Col>
           <Col md={4} className="mt-5 mt-md-0">
-            <h3 className="mb-3">Update Password</h3>
-
-            <PasswordForm user={user} />
+            <Card>
+              <Card.Body>
+                {" "}
+                <h3 className="mb-3">Update Password</h3>
+                <PasswordForm user={user} />
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
       </Container>
